@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EarthDrop Privacy Policy</title>
+<meta name="description" content="EarthDrop collects no data. What it handles stays on your devices and in your own iCloud.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: one reading column, English then Traditional Chinese, colours from the EarthDrop icon (mint ground, soil brown). */
+:root {
+  --bg: #F3FBF7;
+  --surface: #FFFFFF;
+  --fg: #1E2420;
+  --muted: #56625B;
+  --line: #D3E6DC;
+  --soil: #7B4B2E;
+  --mint: #C2F0DC;
+  --font-head: "Space Grotesk", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+  --font-body: "Inter", "Noto Sans TC", "PingFang TC", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #121815; --surface: #1A221E; --fg: #E6EEE9; --muted: #9DB0A5; --line: #2B3A32; --soil: #D19A72; --mint: #1F3B30; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #121815; --surface: #1A221E; --fg: #E6EEE9; --muted: #9DB0A5; --line: #2B3A32; --soil: #D19A72; --mint: #1F3B30; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font: 16px/1.7 var(--font-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 64px; }
+main { max-width: 680px; margin: 0 auto; display: grid; gap: 40px; }
+h1, h2, h3 { font-family: var(--font-head); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(1.8rem, 6vw, 2.4rem); font-weight: 600; }
+h2 { font-size: 1.35rem; font-weight: 600; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p, ul { margin: 0; }
+ul { padding-left: 1.2em; display: grid; gap: 6px; }
+header { display: grid; gap: 12px; }
+.meta { color: var(--muted); font-size: 14px; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 15px; }
+a { color: var(--soil); }
+a:focus-visible { outline: 2px solid var(--soil); outline-offset: 2px; }
+.summary { background: var(--mint); border-radius: 14px; padding: 18px 20px; display: grid; gap: 8px; }
+.summary p { font-weight: 500; }
+section { display: grid; gap: 18px; }
+section + section { border-top: 1px solid var(--line); padding-top: 40px; }
+.item { display: grid; gap: 6px; }
+.item p, .item li { color: var(--fg); }
+.note { color: var(--muted); font-size: 15px; }
+code { font-size: 0.9em; }
+</style>
+</head>
+<body>
+
+<main>
+  <header>
+    <h1>EarthDrop Privacy Policy</h1>
+    <p class="meta">Effective 21 November 2026 · 生效日期：2026 年 11 月 21 日</p>
+    <nav aria-label="Language"><a href="#en">English</a><a href="#zh">繁體中文</a></nav>
+  </header>
+
+  <section id="en" lang="en">
+    <div class="summary">
+      <p>EarthDrop does not collect any data about you.</p>
+      <p class="note">There are no accounts, ads, analytics or tracking, and no servers run by the developer. What you send goes straight to your own devices, or waits in your own iCloud until they pick it up.</p>
+    </div>
+
+    <div class="item">
+      <h2>What EarthDrop does</h2>
+      <p>EarthDrop sends text, photos and files between your own iPhone, iPad and Mac. Devices have to be paired first, with a code, a QR code, or automatically when they use the same Apple ID.</p>
+    </div>
+
+    <div class="item">
+      <h3>When your devices are near each other</h3>
+      <p>Items go directly from one device to the other over Wi-Fi, with no server in between. The connection is encrypted end to end (X25519 key agreement and ChaCha20-Poly1305). Only your paired devices can read it.</p>
+    </div>
+
+    <div class="item">
+      <h3>When your devices are apart</h3>
+      <p>Items wait in the private iCloud database of your Apple ID, which only you can access. The developer cannot see it. Item names and text are stored in iCloud's encrypted fields. Files up to 250 MB are stored as iCloud attachments and count toward your iCloud storage.</p>
+      <ul>
+        <li>An item is deleted from iCloud as soon as the receiving device has it. If it's never picked up, the sending device deletes it the first time EarthDrop runs there after a week. You can also remove it from the sending device's history at any time, which deletes it from iCloud.</li>
+        <li>To find each other, your devices also keep small records in the same private database: each device's name and type (iPhone, iPad or Mac), and an encrypted pairing key.</li>
+        <li>So that a notification can say "iPad sent you a photo", the sending device's name and the kind of item are stored with it.</li>
+      </ul>
+      <p class="note">iCloud and push notifications are provided by Apple under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+    </div>
+
+    <div class="item">
+      <h3>Permissions</h3>
+      <ul>
+        <li><strong>Local Network</strong>: to find and connect to your paired devices nearby, over your Wi-Fi network or directly device to device when there is none.</li>
+        <li><strong>Bluetooth</strong>: a nearby device can let your iPhone or iPad know something is waiting for it. The Bluetooth signal carries no content.</li>
+        <li><strong>Camera</strong>: only to scan another device's pairing QR code. Nothing is recorded or saved.</li>
+        <li><strong>Photos (add only)</strong>: to save photos and videos you receive to your library. EarthDrop cannot see the photos already in your library.</li>
+        <li><strong>Notifications</strong>: to tell you when something arrives.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>On your device</h3>
+      <p>Your send and receive history stays inside EarthDrop on your device. Received photos and videos are also added to your Photos library, and other received files are saved to Files › EarthDrop on iPhone and iPad or to Downloads on the Mac; they stay there until you delete them yourself. Removing an item from EarthDrop's history removes EarthDrop's own copy. Deleting the app removes everything kept inside it.</p>
+      <p>So that your paired devices can appear in the share sheet's suggestions, EarthDrop tells iOS their names each time you send to them. This stays with iOS on your device; forgetting a device removes it.</p>
+    </div>
+
+    <div class="item">
+      <h3>Third parties</h3>
+      <p>EarthDrop has no third-party services, SDKs or advertising. If you choose to share analytics with app developers in your device's settings, or send feedback through TestFlight, Apple may give the developer crash reports and anonymous usage numbers.</p>
+    </div>
+
+    <div class="item">
+      <h3>Children</h3>
+      <p>EarthDrop does not collect information from anyone, including children.</p>
+    </div>
+
+    <div class="item">
+      <h3>Changes</h3>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+    </div>
+
+    <div class="item">
+      <h3>Contact</h3>
+      <p>Questions about privacy: <strong id="contact-en">sakuya.apps@gmail.com</strong></p>
+    </div>
+  </section>
+
+  <section id="zh" lang="zh-Hant">
+    <div class="summary">
+      <p>EarthDrop 不收集任何關於你的資料。</p>
+      <p class="note">沒有帳號、廣告、分析或追蹤，開發者也沒有架設任何伺服器。你傳的東西直接送到你自己的裝置，或先放在你自己的 iCloud，等裝置來拿。</p>
+    </div>
+
+    <div class="item">
+      <h2>EarthDrop 做什麼</h2>
+      <p>EarthDrop 在你自己的 iPhone、iPad 和 Mac 之間傳送文字、照片和檔案。裝置要先配對：輸入配對碼、掃描 QR 碼，或是登入同一個 Apple ID 時自動配對。</p>
+    </div>
+
+    <div class="item">
+      <h3>裝置在附近時</h3>
+      <p>東西透過 Wi-Fi 直接從一台裝置傳到另一台，中間不經過任何伺服器。連線全程加密（X25519 金鑰交換和 ChaCha20-Poly1305），只有你配對過的裝置讀得到。</p>
+    </div>
+
+    <div class="item">
+      <h3>裝置不在一起時</h3>
+      <p>東西先放在你 Apple ID 的 iCloud 私人資料庫，只有你自己能存取，開發者看不到。檔名和文字存在 iCloud 的加密欄位裡。250 MB 以內的檔案以 iCloud 附件存放，會佔用你的 iCloud 空間。</p>
+      <ul>
+        <li>接收的裝置一拿到，東西就會從 iCloud 刪除。如果一直沒被拿走，傳送的裝置在一週後第一次打開 EarthDrop 時會把它刪除。你也可以隨時在傳送裝置的紀錄裡移除它，iCloud 上的那份會一起刪除。</li>
+        <li>為了讓裝置互相找到，同一個私人資料庫裡還有幾筆小資料：每台裝置的名稱和種類（iPhone、iPad 或 Mac），以及加密過的配對金鑰。</li>
+        <li>為了讓通知能顯示「iPad 傳給你一張照片」，傳送裝置的名稱和東西的種類會跟著存放。</li>
+      </ul>
+      <p class="note">iCloud 和推播通知由 Apple 提供，適用 <a href="https://www.apple.com/tw/legal/privacy/">Apple 隱私權政策</a>。</p>
+    </div>
+
+    <div class="item">
+      <h3>權限</h3>
+      <ul>
+        <li><strong>本地網路</strong>：找到並連接附近你配對過的裝置，可以透過你的 Wi-Fi 網路，沒有網路時也能裝置對裝置直接連線。</li>
+        <li><strong>藍牙</strong>：附近的裝置可以通知你的 iPhone 或 iPad 有東西在等它。藍牙訊號裡不含任何內容。</li>
+        <li><strong>相機</strong>：只用來掃描另一台裝置的配對 QR 碼，不會錄下或存檔。</li>
+        <li><strong>照片（僅加入）</strong>：把收到的照片和影片存進你的圖庫。EarthDrop 看不到圖庫裡原有的照片。</li>
+        <li><strong>通知</strong>：有東西送到時通知你。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>你的裝置上</h3>
+      <p>收發紀錄都留在你裝置上的 EarthDrop 裡。收到的照片和影片也會加進你的「照片」圖庫，其他檔案在 iPhone 和 iPad 上存到「檔案 › EarthDrop」，在 Mac 上存到「下載項目」；這些副本會一直留著，直到你自己刪除。從 EarthDrop 紀錄移除某個項目，只會刪掉 EarthDrop 自己的那份。刪除 App 會移除 App 裡保存的所有東西。</p>
+      <p>為了讓配對過的裝置出現在分享選單的建議中，每次你傳東西給某台裝置，EarthDrop 會把它的名稱告訴 iOS。這只留在你裝置上的 iOS 裡；忘記某台裝置就會移除。</p>
+    </div>
+
+    <div class="item">
+      <h3>第三方</h3>
+      <p>EarthDrop 沒有使用任何第三方服務、SDK 或廣告。如果你在裝置設定裡選擇與 App 開發者分享分析資料，或透過 TestFlight 送出意見回饋，Apple 可能會把當機報告和匿名的使用統計提供給開發者。</p>
+    </div>
+
+    <div class="item">
+      <h3>兒童</h3>
+      <p>EarthDrop 不收集任何人的資料，包括兒童。</p>
+    </div>
+
+    <div class="item">
+      <h3>變更</h3>
+      <p>這份政策如有變更，新版會公布在這一頁，並更新生效日期。</p>
+    </div>
+
+    <div class="item">
+      <h3>聯絡</h3>
+      <p>隱私相關問題：<strong id="contact-zh">sakuya.apps@gmail.com</strong></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>
